@@ -17,8 +17,4 @@ pub struct Schema {
     /// of `example` is discouraged, and later versions of this
     /// specification may remove it.
     pub example: Option<serde_json::Value>,
-    /// Inline extensions to this object. Additional properties MAY omit the
-    /// `x-` prefix within this object.
-    #[serde(flatten)]
-    pub extensions: IndexMap<String, serde_json::Value>,
 }
