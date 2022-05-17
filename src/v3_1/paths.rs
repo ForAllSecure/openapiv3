@@ -17,7 +17,7 @@ pub struct PathItem {
     /// object, the behavior is undefined. See the rules for resolving Relative
     /// References.
     #[serde(rename = "$ref", skip_serializing_if = "Option::is_none")]
-    reference: Option<String>,
+    pub reference: Option<String>,
     /// An optional, string summary, intended to apply to all operations in
     /// this path.
     #[serde(skip_serializing_if = "Option::is_none")]
