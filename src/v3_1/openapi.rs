@@ -41,8 +41,8 @@ pub struct OpenApi {
     /// this definition. Global security settings may be overridden on a
     /// per-path basis.
     #[serde(default)]
-    #[serde(skip_serializing_if = "Vec::is_empty")]
-    pub security: Vec<SecurityRequirement>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub security: Option<Vec<SecurityRequirement>>,
     /// A list of tags used by the document with additional metadata.
     /// The order of the tags can be used to reflect on their order by the
     /// parsing tools. Not all tags that are used by the Operation Object
